@@ -25,16 +25,16 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 const htmlText = images.map(
-  el => `<li><img src=${el.url} alt="${el.alt}"></li>`
+  el => `<li><img src=${el.url} alt="${el.alt}" class="img-class"></li>`
 );
 
 gallery.insertAdjacentHTML('afterbegin', htmlText);
 
 const galleryImg = document.querySelectorAll('.gallery img');
 
-galleryImg.forEach(el => {
-  el.classList.add('img-class');
-});
+// galleryImg.forEach(el => {
+//   el.classList.add('img-class');
+// });
 
 gallery.style.display = 'flex';
 gallery.style.gap = '1rem';
