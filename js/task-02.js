@@ -16,9 +16,11 @@ const ingredients = [
 
 const ingredientsID = document.querySelector('#ingredients');
 
-const xxx = ingredients.forEach(el => {
+const xxx = ingredients.map(el => {
   const li = document.createElement('li');
   li.classList.add('item');
   li.textContent = `${el}`;
-  ingredientsID.prepend(li);
+  return li;
 });
+
+ingredientsID.prepend(...xxx);

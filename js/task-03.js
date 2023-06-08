@@ -29,18 +29,3 @@ const htmlText = images.map(
 );
 
 gallery.insertAdjacentHTML('afterbegin', htmlText);
-
-const galleryImg = document.querySelectorAll('.gallery img');
-
-// galleryImg.forEach(el => {
-//   el.classList.add('img-class');
-// });
-
-gallery.style.display = 'flex';
-gallery.style.gap = '1rem';
-
-const imgClass = document.querySelectorAll('.gallery img.img-class');
-imgClass.forEach(el => {
-  el.style.width = '100px';
-  el.style.height = '100px';
-});
